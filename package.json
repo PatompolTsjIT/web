@@ -1,0 +1,32 @@
+{
+  "name": "pai-klai-hai-kum",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ไปไกลให้คุ้ม — ระบบวางแผนทริปนอกเมืองจากข้อมูลแหล่งท่องเที่ยว ททท. (Track 1: Data to Solution)",
+  "scripts": {
+    "seed": "node server/seed-cli.js",
+    "reseed": "node server/seed-cli.js --force",
+    "server": "node server/index.js",
+    "web": "vite",
+    "dev": "concurrently -n api,web -c yellow,magenta \"node server/index.js\" \"vite\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^9.0.1",
+    "vite": "^5.4.8"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  }
+}
